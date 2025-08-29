@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gigs - Dead Water Birds</title>
+  <style>
+    * { box-sizing: border-box; margin:0; padding:0; }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: white;
+      background-color: #000;
+      scroll-behavior: smooth;
+    }
+
+    nav {
+      position: sticky;
+      top: 0;
+      width: 100%;
+      background: rgba(0,0,0,0.7);
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      padding: 15px 0;
+      z-index: 100;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s, border-bottom 0.3s;
+    }
+    nav a:hover,
+    nav a.active {
+      color: #4a90e2;
+      border-bottom: 2px solid #4a90e2;
+    }
+
+    header {
+      position: relative;
+      width: 100%;
+      height: 50vh;
+      background: url('gigs_bg.jpg') no-repeat center center/cover;
+      background-attachment: fixed;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+    header::after {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background-color: rgba(0,0,0,0.4);
+    }
+    header h1 {
+      position: relative;
+      font-size: 4vw;
+    }
+
+    main {
+      max-width: 1000px;
+      margin: 60px auto;
+      padding: 0 20px;
+    }
+    section {
+      margin-bottom: 60px;
+      padding: 25px;
+      background: rgba(0,0,0,0.6);
+      border-radius: 10px;
+    }
+    section h2 {
+      font-size: 2em;
+      border-left: 5px solid #4a90e2;
+      padding-left: 10px;
+      margin-bottom: 15px;
+    }
+    section p {
+      line-height: 1.7;
+    }
+
+    /* Gigs Gallery */
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    .gallery img {
+      width: 100%;
+      border-radius: 10px;
+      transition: transform 0.3s;
+    }
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+
+    footer {
+      text-align: center;
+      background-color: rgba(0,0,0,0.8);
+      padding: 20px;
+      font-size: 0.9em;
+    }
+
+    @media(max-width: 768px){
+      header h1 { font-size: 8vw; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html">Home</a>
+  <a href="music.html">Music</a>
+  <a href="gigs.html" class="active">Gigs</a>
+  <a href="index.html#contact">Contact</a>
+</nav>
+
+<header>
+  <h1>Our Gigs</h1>
+</header>
+
+<main>
+  <section>
+    <h2>Past Shows</h2>
+    <p>We've toured in Southwest China and Shanghai. Here are some posters and live shots:</p>
+    <div class="gallery">
+      <!-- 替换成你的演出图片 -->
+      <img src="gig1.jpg" alt="Gig Poster 1">
+      <img src="gig2.jpg" alt="Gig Poster 2">
+      <img src="gig3.jpg" alt="Live Show">
+      <img src="gig4.jpg" alt="Band Performance">
+    </div>
+  </section>
+</main>
+
+<footer>
+  © 2025 Dead Water Birds | Band Homepage
+</footer>
+
+</body>
+</html>
