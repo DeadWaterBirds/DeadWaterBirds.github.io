@@ -29,17 +29,21 @@
       color: white;
       text-decoration: none;
       font-weight: bold;
-      transition: color 0.3s;
+      transition: color 0.3s, border-bottom 0.3s;
     }
-    nav a:hover {
+    nav a:hover,
+    nav a.active {
       color: #4a90e2;
+      border-bottom: 2px solid #4a90e2;
     }
 
+    /* Header with Parallax Effect */
     header {
       position: relative;
       width: 100%;
       height: 100vh;
       background: url('Livephoto.jpg') no-repeat center center/cover;
+      background-attachment: fixed; /* 视差关键点 */
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -60,8 +64,9 @@
     header p {
       position: relative;
       font-size: 1.5vw;
-      margin-top: 10px;
+      margin: 5px 0;
     }
+
     a.contact-link {
       color: white;
       text-decoration: none;
@@ -124,57 +129,54 @@
 <body>
 
 <nav>
-  <a href="index.html">Home</a>
+  <a href="index.html" class="active">Home</a>
   <a href="music.html">Music</a>
   <a href="gigs.html">Gigs</a>
   <a href="index.html#contact">Contact</a>
 </nav>
 
-  <header>
-    <h1>Dead Water Birds</h1>
+<header>
+  <h1>Dead Water Birds</h1>
+  <p>Post-Punk / Cold Wave</p>
+  <p>Chongqing, China</p>
+</header>
+
+<main>
+  <section id="about">
+    <h2>About Us</h2>
     <p>
-      <p>Post-Punk/Cold Wave</p>
-      <p>Chongqing, China</p>
+      Welcome to our homepage! We are Dead Water Birds, a post-punk band based in Chongqing, China.
     </p>
-  </header>
+  </section>
 
-  <main>
-    <section id="about">
-      <h2>About Us</h2>
-      <p>
-        Welcome to Our homepage! We are Dead Water Birds, a post-punk band based in Chongqing, China.
-      </p>
-    </section>
+  <section id="gigs">
+    <h2>Gigs</h2>
+    <p>
+      We've toured around southwest part of China and Shanghai. Click "More" to see our posters and pictures.
+    </p>
+    <a href="gigs.html" class="section-button">More</a>
+  </section>
 
-    <section id="Gigs">
-      <h2>Gigs</h2>
-      <p>
-        We've toured around southwest part of China and Shanghai, click "More" to see our posters and pictures.
-      </p>
-      <a href="Gigs.html" class="section-button">More</a>
-    </section>
+  <section id="music">
+    <h2>Music</h2>
+    <p>
+      We are now preparing for our first full-length album, click below to see details.
+    </p>
+    <a href="music.html" class="section-button">More</a>
+  </section>
 
-<section id="music">
-  <h2>Music</h2>
-  <p>
-    We are now perparing for our first full-length album, click below to see details.
-  </p>
-  <a href="music.html" class="section-button">More</a>
-</section>
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>
+      Email: <a href="mailto:deadwaterbirds@outlook.com" class="contact-link">deadwaterbirds@outlook.com</a><br>
+      NetEase/网易云: <a href="https://163cn.tv/IYhaNCk" target="_blank">Dead Water Birds</a>
+    </p>
+  </section>
+</main>
 
-
-    <section id="contact">
-      <h2>Contact</h2>
-      <p>
-        Email: <a href="mailto:deadwaterbirds@outlook.com" class="contact-link">deadwaterbirds@outlook.com</a><br>
-        NetEase/网易云： <a href=" https://163cn.tv/IYhaNCk" target="_blank">Dead Water Birds</a>
-      </p>
-    </section>
-  </main>
-
-  <footer>
-    © 2025 Dead Water Birds | Band Homepage
-  </footer>
+<footer>
+  © 2025 Dead Water Birds | Band Homepage
+</footer>
 
 </body>
 </html>
